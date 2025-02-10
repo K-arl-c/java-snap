@@ -1,6 +1,14 @@
 package CardGame;
 
+import java.util.ArrayList;
+
 public class CardGame {
+    private ArrayList<Card> deckOfCards;
+
+    public CardGame(){
+        deckOfCards = new ArrayList<>();
+        createDeck();
+    }
 
 //    STAGE 1
 //    Array List for Cards for deckOfCards - this will contain 52 cards
