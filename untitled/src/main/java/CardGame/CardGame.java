@@ -1,12 +1,13 @@
 package CardGame;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class CardGame {
 
     private ArrayList<Card> deckOfCards;
 //    private String name;
-
+//TO DO CREATE CARD GAME NAME
     public CardGame() {
         this.deckOfCards = new ArrayList<>();
         newDeck();
@@ -31,6 +32,16 @@ public class CardGame {
             }
         }
 
+        public Card dealCard(){
+        return deckOfCards.removeFirst();
+        }
+
+
+
+//        SORTING
+    public ArrayList<Card> sortDeckInNumberOrder(){
+        deckOfCards.sort(Comparator.comparingInt(Card::getValue));
+    }
         }
 
 //    STAGE 1
