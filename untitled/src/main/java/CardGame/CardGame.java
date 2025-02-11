@@ -25,12 +25,13 @@ public class CardGame {
         }
 
 
+        public void getDeck() {
+            for (Card card : deckOfCards) {
+                System.out.println(card);
+            }
+        }
 
-
-
-
-
-    }
+        }
 
 //    STAGE 1
 //    Array List for Cards for deckOfCards - this will contain 52 cards
