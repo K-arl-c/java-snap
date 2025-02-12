@@ -46,7 +46,7 @@ public class CardGame {
     }
 
     public ArrayList<Card> sortDeckIntoSuits() {
-        deckOfCards.sort(Comparator.comparing(Card::getSuit));
+        deckOfCards.sort(Comparator.comparing(Card::getSuit).thenComparingInt(Card::getValue));
         return deckOfCards;
     }
 

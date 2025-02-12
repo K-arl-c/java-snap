@@ -5,6 +5,12 @@ public class main {
         CardGame game = new CardGame();
         game.shuffleDeck();
         game.getDeck();
-        System.out.println(game.dealCard());
+        System.out.println("SORTING DECK");
+        game.sortDeckIntoSuits();
+        game.getDeck();
+        System.out.println("SORTING DECK");
+        game.sortDeckInNumberOrder();
+        game.getDeck();
+//        System.out.println(game.dealCard());
     }
 }
