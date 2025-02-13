@@ -54,6 +54,11 @@ public class CardGame {
         Collections.shuffle(deckOfCards);
         return deckOfCards;
     }
+
+
+    public void playGame(){
+        System.out.println("PlayGame");
+    }
 }
 
 //    STAGE 1
