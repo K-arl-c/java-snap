@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class CardGame {
 
-    private ArrayList<Card> deckOfCards;
+    public ArrayList<Card> deckOfCards;
 
     //    private String name;
 //TO DO CREATE CARD GAME NAME

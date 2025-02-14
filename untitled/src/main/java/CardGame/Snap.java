@@ -10,8 +10,10 @@ public class Snap extends CardGame{
         Scanner scanner = new Scanner(System.in);
         Card currentCard;
 
-        scanner.nextLine();
-        currentCard = dealCard();
-        System.out.println("Drawn Card = " + currentCard);
+        while (!deckOfCards.isEmpty()) {
+            scanner.nextLine();
+            currentCard = dealCard();
+            System.out.println("Drawn Card = " + currentCard);
+        }
     }
 }
