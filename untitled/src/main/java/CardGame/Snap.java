@@ -3,6 +3,9 @@ package CardGame;
 import java.util.Scanner;
 
 public class Snap extends CardGame{
+    private Player player1;
+    private Player player2;
+    private int currentPlayerTurn;
 
 
     @Override
@@ -17,7 +20,7 @@ public class Snap extends CardGame{
             System.out.println("Drawn Card = " + currentCard);
 
 
-            if (currentCard.getSymbol().equals(previousCard.getSymbol())) {
+            if (previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())) {
                 System.out.println("Winner!");
                 break;
             }
