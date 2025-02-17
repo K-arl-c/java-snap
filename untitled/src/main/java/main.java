@@ -7,7 +7,6 @@ public class main {
 //        Snap game = new Snap();
 //        game.shuffleDeck();
 //        game.playGame();
-
         Menu menu = new Menu();
         menu.showMenu();
     }

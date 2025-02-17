@@ -84,9 +84,13 @@ public class Snap extends CardGame{
                     if (System.currentTimeMillis() - snapStart <= 2000 && inputSnap.equalsIgnoreCase("snap")) {
                         System.out.println(getPlayer() + " WINS!");
                         increaseScore();
+                        newDeck();
+                        shuffleDeck();
                         break;
                     } else {
                         System.out.println(getPlayer() + " was too slow, you lose!");
+                        newDeck();
+                        shuffleDeck();
                         break;
                     }
 

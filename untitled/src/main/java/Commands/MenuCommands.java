@@ -11,6 +11,7 @@ public class MenuCommands {
     public MenuCommands(Snap snapGame){
         this.snapGame = snapGame;
         this.scanner = new Scanner(System.in);
+        snapGame.shuffleDeck();
     }
 
 
