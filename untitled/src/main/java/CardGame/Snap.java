@@ -26,6 +26,11 @@ public class Snap extends CardGame{
         currentPlayerTurn = 1 - currentPlayerTurn;
     }
 
+    public void setPlayerName(String p1, String p2){
+        this.player1 = new Player(p1);
+        this.player2 = new Player(p2);
+    }
+
     @Override
     public void playGame(){
         System.out.println("Welcome to Snap! Press ENTER to draw a card");
