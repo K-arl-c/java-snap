@@ -17,12 +17,15 @@ public class Menu {
 
     public void showMenu(){
         while(true){
+            System.out.println("");
             System.out.println("WELCOME TO SNAP! Select an option");
+            System.out.println("");
             System.out.println("1 - Start Game!");
             System.out.println("2 - Set Names");
             System.out.println("3 - Shuffle Deck");
             System.out.println("4 - Show Deck");
             System.out.println("5 - Exit Game");
+            System.out.println("");
             System.out.println(snapGame.getPlayer1Name()+"'s" + " Score is " + snapGame.getPlayer1Score());
             System.out.println(snapGame.getPlayer2Name()+"'s" + " Score is " + snapGame.getPlayer2Score());
             String menuChoice = scanner.nextLine();
