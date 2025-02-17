@@ -28,11 +28,13 @@ public class Snap extends CardGame{
 
     @Override
     public void playGame(){
+        System.out.println("Welcome to Snap! Press ENTER to draw a card");
         Scanner scanner = new Scanner(System.in);
         Card currentCard;
         Card previousCard = null;
 
         while (!deckOfCards.isEmpty()) {
+            System.out.println(getPlayer().getName() + " it is your turn!");
             scanner.nextLine();
             currentCard = dealCard();
             System.out.println("Drawn Card = " + currentCard);
@@ -42,15 +44,16 @@ public class Snap extends CardGame{
                 System.out.println("TYPE SNAP TO WIN!");
                 long snapStart = System.currentTimeMillis();
                 String inputSnap = scanner.nextLine();
-                System.out.println(snapStart);
-
                 if (System.currentTimeMillis() - snapStart <= 2000 && inputSnap.equalsIgnoreCase("snap")){
-                    System.out.println(player1.getName() + "WINS!");
+                    System.out.println(getPlayer() + " WINS!");
+                } else {
+                    System.out.println(getPlayer() + " was too slow, you lose!");
                 }
 
 
             }
             previousCard = currentCard;
+            swapPlayerTurn();
         }
         
     }

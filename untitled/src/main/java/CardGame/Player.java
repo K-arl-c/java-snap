@@ -36,6 +36,10 @@ public class Player {
         this.hasWon = false;
         this.score = 0;
     }
+    @Override
+    public String toString(){
+        return name;
+    }
 
 
 //    NEEDED FOR PLAYER CLASS
