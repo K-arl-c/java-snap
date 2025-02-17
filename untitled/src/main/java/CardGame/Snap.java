@@ -14,6 +14,18 @@ public class Snap extends CardGame{
         this.currentPlayerTurn = 0;
     }
 
+    private Player getPlayer(){
+        if(currentPlayerTurn == 0){
+            return player1;
+        }  else {
+            return player2;
+        }
+    }
+
+    private void swapPlayerTurn(){
+        currentPlayerTurn = 1 - currentPlayerTurn;
+    }
+
     @Override
     public void playGame(){
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +48,7 @@ public class Snap extends CardGame{
                     System.out.println(player1.getName() + "WINS!");
                 }
 
-//                break;
+
             }
             previousCard = currentCard;
         }
