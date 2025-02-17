@@ -40,11 +40,4 @@ public class Player {
     public String toString(){
         return name;
     }
-
-
-//    NEEDED FOR PLAYER CLASS
-//    NAME?
-//    SCORE
-//    HAS WON
-//
 }

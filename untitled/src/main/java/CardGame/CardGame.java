@@ -8,8 +8,6 @@ public class CardGame {
 
     public ArrayList<Card> deckOfCards;
 
-    //    private String name;
-//TO DO CREATE CARD GAME NAME
     public CardGame() {
         this.deckOfCards = new ArrayList<>();
         newDeck();
