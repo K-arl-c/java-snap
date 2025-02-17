@@ -8,6 +8,12 @@ public class Snap extends CardGame{
     private int currentPlayerTurn;
 
 
+    public Snap(){
+        this.player1 = new Player("Player 1");
+        this.player2 = new Player("Player 2");
+        this.currentPlayerTurn = 0;
+    }
+
     @Override
     public void playGame(){
         Scanner scanner = new Scanner(System.in);
@@ -21,8 +27,16 @@ public class Snap extends CardGame{
 
 
             if (previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())) {
-                System.out.println("Winner!");
-                break;
+                System.out.println("TYPE SNAP TO WIN!");
+                long snapStart = System.currentTimeMillis();
+                String inputSnap = scanner.nextLine();
+                System.out.println(snapStart);
+
+                if (System.currentTimeMillis() - snapStart <= 2000 && inputSnap.equalsIgnoreCase("snap")){
+                    System.out.println(player1.getName() + "WINS!");
+                }
+
+//                break;
             }
             previousCard = currentCard;
         }

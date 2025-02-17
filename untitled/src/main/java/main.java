@@ -6,7 +6,7 @@ public class main {
         Snap game = new Snap();
 //        Snap game = new CardGame();
         game.shuffleDeck();
-        game.getDeck();
+//        game.getDeck();
 //        System.out.println("SORTING DECK");
 //        game.sortDeckIntoSuits();
 //        game.getDeck();
