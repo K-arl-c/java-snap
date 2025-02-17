@@ -27,9 +27,13 @@ public class Menu {
 
             switch (menuChoice){
                 case "1": snapGame.playGame();
+                break;
                 case "2": menuCommands.setPlayerNames();
+                break;
                 case "3": menuCommands.shuffleDeck();
+                break;
                 case "4": menuCommands.showDeck();
+                break;
                 case "5": return;
                 default:System.out.println("Invalid choice, try again");
 

@@ -33,7 +33,7 @@ public class Snap extends CardGame{
 
     @Override
     public void playGame(){
-        System.out.println("Welcome to Snap! Press ENTER to draw a card");
+        System.out.println("Press ENTER to draw a card");
         Scanner scanner = new Scanner(System.in);
         Card currentCard;
         Card previousCard = null;
