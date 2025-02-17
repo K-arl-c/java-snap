@@ -33,28 +33,35 @@ public class Snap extends CardGame{
         Card currentCard;
         Card previousCard = null;
 
-        while (!deckOfCards.isEmpty()) {
-            System.out.println(getPlayer().getName() + " it is your turn!");
-            scanner.nextLine();
-            currentCard = dealCard();
-            System.out.println("Drawn Card = " + currentCard);
 
-
-            if (previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())) {
-                System.out.println("TYPE SNAP TO WIN!");
-                long snapStart = System.currentTimeMillis();
-                String inputSnap = scanner.nextLine();
-                if (System.currentTimeMillis() - snapStart <= 2000 && inputSnap.equalsIgnoreCase("snap")){
-                    System.out.println(getPlayer() + " WINS!");
-                } else {
-                    System.out.println(getPlayer() + " was too slow, you lose!");
-                }
-
-
+        while (true) {
+            if (deckOfCards.isEmpty()){
+                System.out.println("You are out of cards, Game Over!");
+                break;
             }
-            previousCard = currentCard;
-            swapPlayerTurn();
+                System.out.println(getPlayer().getName() + " it is your turn!");
+                scanner.nextLine();
+                currentCard = dealCard();
+                System.out.println("Drawn Card = " + currentCard);
+
+
+                if (previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())) {
+                    System.out.println("TYPE SNAP TO WIN!");
+                    long snapStart = System.currentTimeMillis();
+                    String inputSnap = scanner.nextLine();
+                    if (System.currentTimeMillis() - snapStart <= 2000 && inputSnap.equalsIgnoreCase("snap")) {
+                        System.out.println(getPlayer() + " WINS!");
+                        break;
+                    } else {
+                        System.out.println(getPlayer() + " was too slow, you lose!");
+                        break;
+                    }
+
+
+                }
+                previousCard = currentCard;
+                swapPlayerTurn();
+            }
         }
-        
     }
-}
+
