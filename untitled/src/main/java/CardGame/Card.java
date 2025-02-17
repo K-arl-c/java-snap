@@ -1,18 +1,14 @@
 package CardGame;
 
 public class Card {
-    private String suit;
+    private Suit suit;
     private String symbol;
     private int value;
 
 
 //Getters and Setters
-    public String getSuit() {
+    public Suit getSuit() {
         return suit;
-    }
-
-    public void setSuit(String suit) {
-        this.suit = suit;
     }
 
     public String getSymbol() {
@@ -33,7 +29,7 @@ public class Card {
 
 
     //    Making a Card
-    public Card(String suit, String symbol, int value){
+    public Card(Suit suit, String symbol, int value){
         this.suit = suit;
         this.symbol = symbol;
         this.value = value;
@@ -42,7 +38,7 @@ public class Card {
 //toString
     @Override
     public String toString(){
-        return symbol + " of " + suit;
+        return symbol + " of " + suit.getSymbol();
     }
 
 }

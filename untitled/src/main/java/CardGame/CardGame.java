@@ -16,11 +16,11 @@ public abstract class CardGame {
     public abstract void playGame();
 
     void newDeck() {
-        String[] suits = {"♠", "♢", "♡", "♣"};
+        Suit[] suits = Suit.values();
         String[] symbols = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
         int[] values = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
-        for (String suit : suits) {
+        for (Suit suit : suits) {
             for (int currentSymbol = 0; currentSymbol < symbols.length; currentSymbol++) {
                 deckOfCards.add(new Card(suit, symbols[currentSymbol], values[currentSymbol]));
             }
