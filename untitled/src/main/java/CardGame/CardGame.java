@@ -4,14 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class CardGame {
+public abstract class CardGame {
 
-    public ArrayList<Card> deckOfCards;
+    protected ArrayList<Card> deckOfCards;
 
     public CardGame() {
         this.deckOfCards = new ArrayList<>();
         newDeck();
     }
+
+    public abstract void playGame();
 
     void newDeck() {
         String[] suits = {"♠", "♢", "♡", "♣"};
@@ -48,14 +50,9 @@ public class CardGame {
         return deckOfCards;
     }
 
-    public ArrayList<Card> shuffleDeck() {
+    public void shuffleDeck() {
         Collections.shuffle(deckOfCards);
-        return deckOfCards;
     }
 
-
-    public void playGame(){
-        System.out.println(".");
-    }
 }
 
