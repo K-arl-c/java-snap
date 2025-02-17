@@ -23,6 +23,7 @@ public class Menu {
             System.out.println("3 - Shuffle Deck");
             System.out.println("4 - Show Deck");
             System.out.println("5 - Exit Game");
+//            System.out.println(snapGame.getpl)
             String menuChoice = scanner.nextLine();
 
             switch (menuChoice){

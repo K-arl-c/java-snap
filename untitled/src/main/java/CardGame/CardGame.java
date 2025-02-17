@@ -57,7 +57,7 @@ public class CardGame {
 
 
     public void playGame(){
-        System.out.println("PlayGame");
+        System.out.println(".");
     }
 }
 

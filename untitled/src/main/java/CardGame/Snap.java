@@ -24,6 +24,23 @@ public class Snap extends CardGame{
         }
     }
 
+    public String getPlayer1Name() {
+        return player1.getName();
+    }
+
+    public String getPlayer2Name() {
+        return player2.getName();
+    }
+
+    public int getPlayer1Score() {
+        return player1Score;
+    }
+
+    public int getPlayer2Score() {
+        return player2Score;
+    }
+
+
     private void swapPlayerTurn(){
         currentPlayerTurn = 1 - currentPlayerTurn;
     }
