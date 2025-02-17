@@ -26,11 +26,11 @@ public class Menu {
             String menuChoice = scanner.nextLine();
 
             switch (menuChoice){
-                case "1":
-                case "2":
-                case "3":
-                case "4":
-                case "5":
+                case "1": snapGame.playGame();
+                case "2": menuCommands.setPlayerNames();
+                case "3": menuCommands.shuffleDeck();
+                case "4": menuCommands.showDeck();
+                case "5": return;
                 default:System.out.println("Invalid choice, try again");
 
             }
