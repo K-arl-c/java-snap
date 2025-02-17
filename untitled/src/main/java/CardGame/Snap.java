@@ -6,6 +6,8 @@ public class Snap extends CardGame{
     private Player player1;
     private Player player2;
     private int currentPlayerTurn;
+    private int player1Score;
+    private int player2Score;
 
 
     public Snap(){
@@ -29,6 +31,14 @@ public class Snap extends CardGame{
     public void setPlayerName(String p1, String p2){
         this.player1 = new Player(p1);
         this.player2 = new Player(p2);
+    }
+
+    private void increaseScore(){
+        if(currentPlayerTurn == 0){
+            player1Score ++;
+        } else{
+            player2Score ++;
+        }
     }
 
     @Override
@@ -56,6 +66,7 @@ public class Snap extends CardGame{
                     String inputSnap = scanner.nextLine();
                     if (System.currentTimeMillis() - snapStart <= 2000 && inputSnap.equalsIgnoreCase("snap")) {
                         System.out.println(getPlayer() + " WINS!");
+                        increaseScore();
                         break;
                     } else {
                         System.out.println(getPlayer() + " was too slow, you lose!");
