@@ -1,5 +1,5 @@
 
-# Java Snap
+# ♠♡♣♢ Snap ♤♥♧♦
 
 A 2 player Snap card game that makes use of the Java console.
 
